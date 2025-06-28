@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mensaje de Wade</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #a2d4f0, #d1f0ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #064d72;
+      text-align: center;
+    }
+
+    #mensaje {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+      font-size: 1.2em;
+      line-height: 1.6;
+      opacity: 0;
+      transition: opacity 1.5s ease;
+    }
+
+    #wade {
+      margin-top: 20px;
+      max-height: 300px;
+      opacity: 0;
+      transition: opacity 1.5s ease;
+    }
+
+    button {
+      background-color: #3bb6e4;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1em;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #329bc8;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pulsa si quieres saber lo que siento</h1>
+  <button onclick="mostrarMensaje()">Mostrar mensaje</button>
+
+  <img id="wade" src="https://i.imgur.com/RcK8NNC.png" alt="Wade" />
+
+  <div id="mensaje">
+    Lo siento por todo. Siempre me han acabado cambiando por otra persona y no quería perderte...  
+    pero lo único que hice fue hacerte daño.  
+    <br><br>
+    Sí, tengo que cambiar mi mentalidad, y por primera vez me voy a esforzar en ello.  
+    Porque prefiero cambiar yo... a perderte a ti.
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById("wade").style.opacity = 1;
+      document.getElementById("mensaje").style.opacity = 1;
+    }
+  </script>
+
+</body>
+</html>

@@ -7,42 +7,20 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
+      padding: 20px;
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom, #a2d4f0, #d1f0ff);
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
+      justify-content: flex-start;
+      min-height: 100vh;
+      box-sizing: border-box;
     }
 
     h1 {
       color: #064d72;
       text-align: center;
-    }
-
-    #mensaje {
-      margin-top: 20px;
-      padding: 20px;
-      border-radius: 15px;
-      background-color: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      width: 80%;
-      max-width: 600px;
-      text-align: center;
-      font-size: 1.2em;
-      line-height: 1.6;
-      opacity: 0;
-      transition: opacity 1.5s ease;
-    }
-
-    #wade {
-      margin-top: 20px;
-      max-height: 300px;
-      opacity: 0;
-      transition: opacity 1.5s ease;
     }
 
     button {
@@ -55,35 +33,70 @@
       cursor: pointer;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
       transition: background-color 0.3s ease;
+      margin-top: 20px;
     }
 
     button:hover {
       background-color: #329bc8;
     }
+
+    #wade {
+      margin-top: 20px;
+      max-height: 200px;
+      opacity: 0;
+      transition: opacity 1.5s ease;
+    }
+
+    #mensaje {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 600px;
+      max-height: 250px;
+      overflow-y: auto;
+      text-align: center;
+      font-size: 1.1em;
+      line-height: 1.6;
+      opacity: 0;
+      transition: opacity 1.5s ease;
+    }
+
+    /* Para móviles pequeños */
+    @media (max-width: 500px) {
+      #mensaje {
+        font-size: 1em;
+        max-height: 200px;
+      }
+      #wade {
+        max-height: 160px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  
-  <button onclick="mostrarMensaje()">Pulsa aqui Andrea</button>
+  <button onclick="mostrarMensaje()">Pulsa aquí Andrea</button>
 
   <img id="wade" src="wadee.jpg" alt="Wade" />
 
   <div id="mensaje">
-    Lo siento por todo. Siempre me han acabado cambiando por otra persona y tenia mucho miedo de que ocurriese de nuevo contigo  
-    y perderte pero lo único que he hecho ha sido hacerte daño.  
+    Lo siento por todo. Siempre me han acabado cambiando por otra persona y tenía mucho miedo de que ocurriese de nuevo contigo  
+    y perderte, pero lo único que he hecho ha sido hacerte daño.  
     <br><br>
-    Sí, tengo que cambiar mi mentalidad, y por primera vez me voy a esforzar en ello.Porque por primera vez, ya no solo me esta jodiendo a mi sino que encima esta haciendo 
-    daño a alguien que yo quiero que eres tu.
+    Sí, tengo que cambiar mi mentalidad, y por primera vez me voy a esforzar en ello. Porque por primera vez, ya no solo me está jodiendo a mí, sino que encima está haciendo 
+    daño a alguien que yo quiero: tú.
     <br><br>
-    Dejame porfavor demostrarte que voy a cambiar esto y dejar de comerme la cabeza y disfrutar del tiempo que pase contigo sin pensar que pasara en el futuro
-    ni volverme loco pensando cosas que tu misma ya me has dicho.Sé que no lo merezco, sé que me has pasado varias pero dejame demostrarte que eres mas importante que cualquier miedo que tenga.
-    No habran mas vaivenes, voy a dejar de hacer el crio y estar por ti que es lo que quiero.
-   
+    Déjame por favor demostrarte que voy a cambiar esto y dejar de comerme la cabeza, y disfrutar del tiempo que pase contigo sin pensar qué pasará en el futuro,  
+    ni volverme loco pensando cosas que tú misma ya me has dicho.  
+    Sé que no lo merezco, sé que me has pasado varias, pero déjame demostrarte que eres más importante que cualquier miedo que tenga.
     <br><br>  
-    No quiero que te vayas de mi vida, no quiero perderte, me importas de verdad y soy el tonto que de verdad quiere hacerte feliz.
-    Espero que esto y mis futuras acciones puedan ayudarte a perdonarme porque no se que mas hacer.
-  
+    No habrá más vaivenes, voy a dejar de hacer el crío y estar por ti, que es lo que quiero.  
+    No quiero que te vayas de mi vida, no quiero perderte. Me importas de verdad y soy el tonto que de verdad quiere hacerte feliz.
+    <br><br>
+    Espero que esto y mis futuras acciones puedan ayudarte a perdonarme... porque no sé qué más hacer.
   </div>
 
   <script>
